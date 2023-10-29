@@ -1,0 +1,29 @@
+.article-card {
+  .card {
+    border: none;
+    .card-img {
+      height: 360px;
+      overflow: hidden;
+      .card-img-top {
+        width: 100%;
+      }
+    }
+    @media (max-width: 375px) {
+      .card-img {
+        height: auto; /* 取消高度 */
+      }
+    }
+    .card-title {
+      font-weight: bold;
+    }
+    .card-body {
+      background-color: $main-bg;
+      color: $text-main;
+    }
+    .card-text {
+      .text-body-secondary {
+        color: $text-mark;
+      }
+    }
+  }
+}

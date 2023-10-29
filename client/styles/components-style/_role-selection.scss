@@ -1,0 +1,49 @@
+.role-selection {
+    background-color: $cos-white;
+    border-radius: 20px;
+    padding: 3px 30px;
+
+    a {
+        border-bottom: 0;
+        position: relative;
+
+        // 擴大點擊範圍
+        &::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            bottom: -15px;
+            left: -15px;
+        }
+    }
+
+    button {
+        color: #a1a1a1;
+
+        &:hover {
+            color: $text-main;
+            font-weight: bold;
+        }
+    }
+
+    .active {
+        color: $text-main;
+        font-weight: bold;
+    }
+
+    button:first-child {
+        margin-right: 30px;
+    }
+
+    .underline {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        /* role-selection 的垂直padding */
+        height: 5px;
+        /* 底線的高度 */
+        background-color: $hover;
+    }
+}

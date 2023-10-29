@@ -1,0 +1,134 @@
+%fav-icon-style {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+
+.mission-list-card {
+    width: 100%;
+    background-color: $cos-white;
+    box-shadow: 0px 0px 5px rgba(40, 39, 39, 0.1);
+    border-radius: 4px;
+    padding: 1rem;
+    position: relative;
+    top: 0;
+
+    &:hover {
+        top: -5px;
+    }
+
+    .mission-img {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .mission-content {
+        .title {
+            min-height: 3.75rem;
+        }
+
+        .tag-btn {
+            font-size: 12px;
+            border: 2px solid rgba(152, 152, 152, 0.6);
+            border-radius: 8px;
+            padding: 1px 5px;
+            background-color: #fffdfb;
+            box-shadow: 0px 0px 5px rgba(142, 142, 142, 0.145);
+            color: #555555;
+            cursor: default;
+
+            &:hover {
+                border-color: $header-bg;
+                color: $hover;
+            }
+        }
+
+        img {
+            cursor: pointer;
+            width: 45px;
+        }
+
+        img:hover {
+            content: url("/heart-clicked.svg");
+        }
+
+        .update-title{
+            font-size: 12px;
+            color: #555555;
+        }
+
+        .price {
+
+            span {
+                color: $price;
+                font-weight: 600;
+            }
+
+            // 應徵按鈕
+            button {
+                // padding: 3px 10px;
+                color: $main-bg;
+            }
+
+            .heart-btn {
+                border: 0;
+                // right: 30px;
+                color: $text-mark;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                padding: 0;
+
+                .empty-icon {
+                    @extend %fav-icon-style;
+                    color: $hover;
+
+                    // &:hover{
+                    //   color: $price;
+                    // }
+                    &-hover {
+                        //就是fill-icon只是少了跳動
+                        @extend %fav-icon-style;
+                        color: $price;
+                    }
+                }
+
+                .fill-icon {
+                    @extend %fav-icon-style;
+                    color: $price;
+                    animation: heartbeat 0.4s 2;
+                }
+
+                @keyframes heartbeat {
+                    0% {
+                        transform: scale(1);
+                        /* 初始大小 */
+                    }
+
+                    50% {
+                        transform: scale(1.2);
+                        /* 放大到1.2倍 */
+                    }
+
+                    100% {
+                        transform: scale(1);
+                        /* 返回到原始大小 */
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .mission-list-card {
+        padding: 0.5rem;
+        .mission-content {
+            .title {
+                min-height: 3rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.job-search {
+  width: 40%;
+  max-width: 350px;
+  height: 35px;
+  // margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  input {
+    width: calc(100% - 50px);
+    padding-left: 1rem;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid $hover;
+    border-right: none;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $hover;
+    }
+  }
+  button {
+    width: 50px;
+    border: 1px solid $hover;
+    border-radius: 20px;
+    background-color: $main-bg;
+    position: relative;
+    right: 11.5px;
+    .job-search-icon {
+      font-size: 22px;
+      color: $hover;
+    }
+  }
+  .ripple {
+    animation: ripple 0.4s ease-out;
+    pointer-events: none;
+  }
+  @keyframes ripple {
+    to {
+      transform: scale(1.1);
+      box-shadow: 0 0px 10px lighten($hover, 13%);
+    }
+  }
+}
+
+.drop-down-filter {
+  // margin: 2rem;
+  $drop-down-width: 150px;
+  width: $drop-down-width;
+  &-btn {
+    // width: 100%;
+    // transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    background-color: $cos-white;
+    border: none;
+    padding: 0;
+    border-radius: 2px;
+    color: $text-main;
+    &-icon {
+      background-color: $header-bg;
+      width: 40px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    .icon {
+      margin-right: 0.4rem;
+    }
+  }
+  &-menu {
+    .MuiPaper-elevation {
+      box-shadow: 0 5px 5px rgba(192, 192, 192, 0.479);
+    }
+    .MuiMenu-list {
+      background-color: $cos-white;
+      padding: 0;
+      width: $drop-down-width - 3px;
+      // box-shadow: 0px 0px 5px rgb(24, 23, 23);
+      li {
+        padding: 0;
+        // margin: 0.1rem 0;
+        width: 100%;
+        color: $text-main;
+        span {
+          width: 100%;
+          text-align: center;
+          padding: 0.3rem 1rem;
+          font-family: "Poppins", "Noto Sans TC", Helvetica, Arial,
+            "PingFang TC", "苹方-繁", "Heiti TC", "黑體-繁",
+            "Microsoft JhengHei", "微軟正黑體";
+        }
+        &:hover {
+          background-color: $header-bg;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .nemu-d-none {
+    display: none;
+    height: auto;
+  }
+}
+.drop-down-active {
+  // background-color: lighten($light-gray, 3%);
+  color: $hover;
+}

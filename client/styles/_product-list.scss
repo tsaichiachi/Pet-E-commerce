@@ -1,0 +1,181 @@
+@import "@/styles/_variable.scss";
+
+
+.product-list{
+    .product-offcanvas-m{
+        z-index: 99;
+        position: fixed;
+        right: 0;
+
+    }
+    a{
+        border-bottom: 0;
+    }
+.banner img{
+        width: 100%;
+    }
+    
+.accordion{
+    border: none;
+}
+.sidebar-product{
+    margin-top: 20px;
+   .sidebar {
+    .accordion-item{
+         border: none;
+    }
+    .accordion-button{
+        background-color: $content-bg;
+        color: $text-main;
+        text-align: center ; 
+        border-bottom: 1px dashed $text-mark;
+        display: block;
+        padding: 10px 0;
+    }
+    }
+    .button-subcategory{
+        background-color:var(--bs-body-bg);
+        color: $text-main;
+        border: none;
+        margin-top: 5px;
+        padding: 0;
+    }
+    .active{
+        color: $price;
+        font-weight: 800;
+    }
+   }
+
+.filter{
+    border: none;
+    .card{
+        border: none;
+    }
+    .card-header{
+         background-color: $content-bg;
+        color: $text-main;
+        font-size: 1.25rem;
+        text-align: center ; 
+        border-bottom: 1px dashed $text-mark;
+    }
+    .card-body{
+        color: $text-main;
+        font-size: 1.25rem;
+        text-align: center ; 
+    }
+}
+ 
+//
+.sort-btn{
+    // border: 3px solid;
+    // border-radius: 20px;
+    // background-color: $cos-white;
+    // width: 200px;
+    // width: 100%;
+    .form-label{
+        margin-bottom: 0;
+    }
+    
+    button{
+        border: none;
+        background-color: $cos-white;
+        font-size: 1rem;
+        color: $text-mark;
+    }
+}
+    .sidebar-product{
+       width: 100%;
+    }
+
+@media screen and (max-width: 992px){
+    .job-search{
+        width: 100%;
+    }
+
+    .search-sort{
+        .sort{
+            margin-top: 5%;
+        }
+    }
+   
+}
+
+
+
+.product-offcanvas-m{
+    .accordion{
+    border: none;
+}
+.accordion-item{
+         border: none;
+    }
+    .accordion-button{
+        background-color: $content-bg;
+        color: $text-main;
+        text-align: center ; 
+        border-bottom: 1px dashed $text-mark;
+        display: block;
+        padding: 10px 0;
+    }
+    .button-subcategory{
+        background-color:var(--bs-body-bg);
+        color: $text-main;
+        border: none;
+        margin-top: 5px;
+        padding: 0;
+    }
+    .active{
+        color:  #ca526f;
+        font-weight: 800;
+    }
+
+}
+
+.sort .form-select{
+    width: 105%;
+}
+
+
+.slick-next{
+    right: 0;
+}
+.slick-prev{
+    left: 0;
+ 
+}
+.slick-next:before{
+    font-size: 0px;
+}
+
+.offcanvas-body {
+    padding: 0;
+}
+
+// .accordion-button:not(.collapsed){
+ 
+// }
+
+
+}
+    
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,224 @@
+// 檔案位置: styles/global.scss
+// bootstrap變數覆蓋用 (Variable overrides)
+$border-radius: 2px;
+$border-color: rgba(0, 0, 0, 0.1);
+$box-shadow: 0 1px 4px rgb(0, 0, 0, 0.25);
+$form-select-focus-border-color: $border-color;
+$focus-ring-color: transparent;
+$form-select-focus-box-shadow: $box-shadow;
+$carousel-indicator-active-bg: #d7965b;
+$carousel-indicator-height: 5px;
+$breadcrumb-divider: quote(">");
+$offcanvas-horizontal-width: 50%;
+
+$dropdown-link-color: #512f10;
+$dropdown-link-hover-color: shade-color($dropdown-link-color, 10%);
+$dropdown-link-hover-bg: #f8cb9f;
+$dropdown-link-active-color: #512f10;
+$dropdown-link-active-bg: #f8cb9f;
+$dropdown-bg: #fffdfb;
+$dropdown-border-width: 0;
+
+// .animate__animated.animate__fadeInDownBig {
+//   --animate-duration: 0.3s;
+// }
+
+// ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
+// 導入所有 bootstrap 樣式
+@import "~bootstrap/scss/bootstrap";
+// ↓↓↓  其它客製樣式要寫在這行的"下面" ↓↓↓
+// 客製化變數樣式
+@import "@/styles/_variable.scss";
+
+@font-face {
+  font-family: "Microsoft YaHei"; /* 字体名称 */
+  src: url("../data/微软雅黑.ttf") format("truetype"); /* 字体文件的路径 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+// google Noto Sans TC 中文字體
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&display=swap";
+
+// 英文字體
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap";
+
+@import "@/node_modules/react-credit-cards-2/dist/lib/styles.scss";
+
+// 定義中文字體用
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", "Noto Sans TC", Helvetica, Arial, "PingFang TC",
+    "苹方-繁", "Heiti TC", "黑體-繁", "Microsoft JhengHei", "微軟正黑體",
+    // Cross-platform generic font family (default user interface font)
+    system-ui,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Windows
+    "Segoe UI",
+    // Android
+    Roboto,
+    // Basic web fallback
+    "Helvetica Neue",
+    Arial,
+    // Linux
+    "Noto Sans",
+    "Liberation Sans",
+    // Sans serif fallback
+    sans-serif,
+    // Emoji fonts
+    "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: $main-bg;
+  // padding: 0 !important;
+  overflow-x: hidden;
+}
+nextjs-portal {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: $text-main;
+  // border-bottom: 4px solid transparent;
+  // &:hover {
+  //   border-bottom: 4px solid $hover;
+  // }
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.active-hover {
+  position: relative;
+  // transition: all 0.2s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px; /* 下底線高度 */
+    bottom: -5px;
+    left: 50%; /* 讓下底線置中 */
+    transform: translate(-50%, 0%); /* 讓下底線置中 */
+    background-color: $hover;
+    transition: width 0.2s ease-in-out; /* 動畫過渡效果 */
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.animate-button-one {
+  border-radius: 2px;
+  background-color: transparent;
+  border: none;
+  color: $text-main;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 130px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: 5px;
+  & > * {
+    // cursor: pointer;
+    position: relative;
+    transition: all 0.4s;
+    &::after {
+      content: "\00bb";
+      // height: 35px;
+      font-size: 30px;
+      // color: $cos-white;
+      position: absolute;
+      top: 35%;
+      transform: translateY(-50%);
+      opacity: 0;
+      right: -20px;
+      transition: all 0.4s;
+    }
+  }
+  &:hover > * {
+    padding-right: 18px;
+    // color: $cos-white;
+    &::after {
+      opacity: 1;
+      right: 0;
+    }
+  }
+  &:hover {
+    // background-color: $hover;
+  }
+}
+// ↓↓↓ components scss styles放下面
+
+// 主要樣式組件(header、footer、商品卡片等等...)
+@import "@/styles/components-style/_footer.scss";
+@import "@/styles/components-style/_pagination.scss";
+@import "@/styles/components-style/_bread-crumb.scss";
+@import "@/styles/components-style/_ResponsiveAppBar.scss";
+@import "@/styles/components-style/home/_home-product-card.scss";
+@import "@/styles/_cat-loading.scss";
+
+// 小貓上工
+@import "@/styles/components-style/work/_create-mission.scss";
+@import "@/styles/components-style/work/_helper-detail.scss";
+@import "@/styles/components-style/work/job.scss";
+@import "@/styles/components-style/_latest-mission.scss";
+@import "@/styles/components-style/_role-selection.scss";
+@import "@/styles/components-style/_mission-card.scss";
+@import "@/styles/components-style/_find-mission.scss";
+@import "@/styles/components-style/_product-card.scss";
+@import "@/styles/components-style/_mission-detail.scss";
+@import "@/styles/components-style/work/_mission_helper_list.scss";
+
+//小貓商城、購物流程
+@import "@/styles/components-style/_product-card2.scss";
+@import "@/styles/_product-detail.scss";
+@import "@/styles/components-style/_quantity-counter.scss";
+@import "@/styles/_product-list.scss";
+@import "@/styles/product/_product_cart.scss";
+@import "@/styles/product/_product_cart_checkout.scss";
+@import "@/styles/components-style/_product-list-offcanvas.scss";
+@import "@/styles/product/_pay.scss";
+
+//會員頁面
+@import "@/styles/components-style/_list-d.scss";
+@import "@/styles/components-style/_list-user-m.scss";
+@import "@/styles/components-style/work/_member-helper.scss";
+@import "@/styles/components-style/_member-order-detail.scss";
+@import "@/styles/components-style/_member-order.scss";
+@import "@/styles/components-style/work/_sales-record.scss";
+@import "@/styles/components-style/_member-purchast.scss";
+@import "@/styles/components-style/_member-wishlist.scss";
+@import "@/styles/components-style/_member-joblist.scss";
+@import "@/styles/components-style/_member-history.scss";
+@import "@/styles/components-style/_member-star.scss";
+@import "@/styles/components-style/_login.scss";
+@import "@/styles/components-style/_userform.scss";
+@import "/styles/components-style/_ResponsiveAppBar.scss";
+@import "/styles/components-style/_resetPassword.scss";
+@import "/styles/components-style/_user-coupon.scss";
+@import "/styles/components-style/_coupon-style.scss";
+@import "/styles/components-style/membership.scss";
+
+// 首頁
+@import "@/styles/_home.scss";
+@import "@/styles/components-style/home/_block-one.scss";
+@import "@/styles/components-style/home/_block-two.scss";
+@import "@/styles/components-style/home/_block-two-mobile.scss";
+@import "@/styles/components-style/home/_block-three.scss";
+@import "@/styles/components-style/home/_block-four-mobile.scss";
+@import "@/styles/components-style/home/_block-five.scss";
+@import "@/styles/components-style/home/_block-six.scss";
+@import "@/styles/components-style/home/_block-six-mobile.scss";
+
+//文章
+@import "@/styles/components-style/_article-list-card.scss";
+@import "@/styles/components-style/_article-catogory.scss";
+@import "@/styles/components-style/_article-card.scss";
+@import "@/styles/_article.scss";
+@import "@/styles/components-style/home/_block-three.scss";
+@import "@/styles/components-style/home/_block-six.scss";
+
+//聊天室
+@import "@/styles/_chatlist.scss";
+@import "@/styles/_chatroom.scss";

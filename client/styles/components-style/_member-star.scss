@@ -1,0 +1,21 @@
+@import "@/styles/variable";
+.star {
+  .on {
+    color: gold;
+  }
+  
+  .off {
+    color: gray;
+  }
+  
+  .good-style{
+    color:red;
+  }
+  
+  .star-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,56 @@
+.membership-box{
+    display: grid;
+    width: 38rem;
+    height: 20rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 1.5fr 1fr;
+    grid-column-gap: 30px;
+
+}
+.membership-header{
+    font-weight: 600;
+}
+.member-avatar-img{
+    width: 180px;
+    height: 180px;
+}
+.membership-body{
+    line-height: 1.8;
+    text-align: center;
+    color: $text-main;
+    .membership-title-level{
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-radius: 50px;
+    }
+    .discount{
+        color:#ca526f;
+    }
+}
+
+@media (max-width: 768px){
+    .css-15re8h0{
+        //手機板modal寬度
+        width: 360px;
+    }
+    .membership-box{
+        //width: 40%;
+        //grid-template-columns: 1fr;
+        //grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+    }
+    .member-avatar-img{
+        width: 90px;
+        height: 90px;
+    }
+    .membership-body{
+        line-height: 1.5;
+        //text-align: center;
+        //color: $text-main;
+        .membership-title-level{
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+       
+    }
+}

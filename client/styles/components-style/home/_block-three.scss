@@ -1,0 +1,45 @@
+.block-three {
+  background-color: #eeddcc;
+  @media (max-width: 375px) {
+    .img-fluid {
+      max-width: 200%;
+      height: auto;
+      margin: 10px;
+    }
+  }
+
+  .title {
+    color: #34251f;
+    font-weight: bold;
+  }
+  .price {
+    color: $price;
+    font-weight: bold;
+    .content {
+      color: #34251f;
+    }
+  }
+}
+
+.block-three-mobile {
+  background-color: #eeddcc;
+  @media (max-width: 375px) {
+    .img-fluid {
+      max-width: 200%;
+      height: auto;
+      margin: 10px;
+    }
+  }
+
+  .title {
+    color: #34251f;
+    font-weight: bold;
+  }
+  .price {
+    color: $price;
+    font-weight: bold;
+    .content {
+      color: #34251f;
+    }
+  }
+}

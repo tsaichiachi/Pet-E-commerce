@@ -1,0 +1,189 @@
+@import "@/styles/variable";
+.checkout{
+    background: $main-bg;
+    color: $text-main;
+    .step{
+        .step1{
+            background: #fff;
+            border-radius: 20px 0 0 20px;
+            color: $light-gray;
+
+        }
+        .step2{
+            background: #fff;
+            border-radius: 0 20px 20px 0;
+            border-bottom: 4px $hover  solid;
+        }
+    }
+    .notice{
+        p{
+            font-weight: 600;
+            line-height: 1.5;
+        }
+    }
+    .title{
+        background: $header-bg;
+        font-weight: 600;        
+    }
+    .information{     
+        .form-check-input:checked {
+            background-color: $text-main;
+            border: 0;
+        }
+        .plan{
+            font-weight: 600;
+        }
+
+    }
+    .form-control:focus{
+        border: 1px solid $text-main;
+    }
+    .form-select:focus{
+        box-shadow: none;
+        border: 1px solid $text-main;       
+    }
+    .cart-d-content{
+        thead{
+        border-bottom: 1px $light-gray solid;
+        }
+        th{
+            line-height: 2.5;
+        }
+        td:nth-child(1) {
+            width: 15%;
+        }
+        td:nth-child(2) {
+            width: 45%;
+        }
+        td:nth-child(3) {
+            width: 20%;
+        }
+        td:nth-child(4) {
+            width: 20%;
+        }
+        td:nth-child(5) {
+            width: 20%;
+        }
+        @media screen and (max-width: 960px) {
+            /* 当屏幕宽度小于等于1024px时应用的样式 */
+            td:nth-child(1) {
+                width: 25%;
+            }
+            td:nth-child(2) {
+                width: 30%;
+            }
+            td:nth-child(3) {
+                width: 20%;
+            }
+            td:nth-child(4) {
+                width: 20%;
+            }
+            td:nth-child(5) {
+                width: 20%;
+            }
+          }
+        tbody{
+            tr{
+                border-bottom: .1px solid $light-gray ;
+                td{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                img{
+                    width: 120px;
+                    height: 120px;
+                }
+                .type{
+                    color: $hover;
+                }
+            }
+        }
+    }
+    .cart-m-content{
+        tbody{
+            tr{
+                border-bottom: .1px solid $light-gray ;
+                td{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                td:nth-child(1) {
+                    width: 25%;
+                }
+                td:nth-child(2) {
+                    width: 40%;
+                }
+                td:nth-child(3) {
+                    width: 20%;
+                }
+                td:nth-child(4) {
+                    width: 20%;
+                }
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+                .type{
+                    color: $hover;
+                }
+            }   
+        }
+    }
+    .accordion{
+        display: flex;
+        flex-direction: column;
+        label {
+            cursor: pointer;
+            // padding: 10px;
+        }      
+        .form-check-input:checked {
+            background-color: $text-main;
+            border: 0;
+        }     
+        .content {
+            display: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }       
+        input[type="radio"]:checked + label + .content {
+            display: block;
+        }
+    }
+    .detail{
+        border: 1px $text-main solid;
+        border-radius: 2px;
+        .cal{
+            border-bottom:2px solid $text-main ;
+        }
+        @media screen and (max-width: 576px) {
+            /* 当屏幕宽度小于等于1024px时应用的样式 */
+            border: 0px ;
+        }
+    }
+    .price{
+        color: $light-gray;
+        text-decoration: line-through
+    }
+    .newprice{
+        color: $price;
+    }   
+    .progress-part{
+        p{
+            color: $light-gray;
+            line-height: 0.1;
+        }
+        background: #fff;
+        .progress-bar{
+            background-color:$hover;
+        }
+    
+    }
+    .nextStep{
+        // background:  #f2f2f2;
+        background: $border-color;
+
+    }
+    span{
+        color: $price;
+    }
+}

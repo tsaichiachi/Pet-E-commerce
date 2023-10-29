@@ -1,0 +1,42 @@
+.chatroom {
+  .sticky-top {
+    background-color: $hover;
+  }
+  .content {
+    background-color: $header-bg;
+    color: $text-main;
+  }
+  .target-user {
+    .avatar {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .chat-content {
+    height: 70vh;
+  }
+  .chat-content-target-user,
+  .user {
+    .avatar {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .img-fluid {
+    width: 100%;
+    height: 100%;
+  }
+  .helper-information{
+    background-color: #fff2a9;
+    // width: calc(100% - 50px); // 扣掉大頭照的寬度
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .chatroom {
+    .helper-information, .rounded-pill{
+      width: 280px;
+    }
+  }
+}

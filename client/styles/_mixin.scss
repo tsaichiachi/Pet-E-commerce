@@ -1,0 +1,22 @@
+@mixin btn-config($color, $bg, $border-color, $hover-color, $hover-bg) {
+  color: $color;
+  background-color: $bg;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  padding: 0.375rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg;
+  }
+  &:active {
+    background-color: darken($hover-bg, 3%);
+  }
+  &:disabled {
+    background-color: lighten($hover-bg, 10%);
+    // color: $light-gray;
+    cursor: not-allowed;
+  }
+}

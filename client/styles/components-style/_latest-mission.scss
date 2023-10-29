@@ -1,0 +1,205 @@
+.latest-mission-card {
+  a {
+    border-bottom: 0;
+  }
+
+  &:hover {
+    .mission-img img {
+      transform: scale(1.1);
+    }
+  }
+
+  width: 350px;
+  margin: 30px 0;
+
+  .mission-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; // 要寫在這邊 不能寫在img 這樣才能把mission-img的大小限定在圓形內（否則會是140*140的方形內）當hover時img變大 視覺上才會有zoom-in效果 而非整張圖片變大張
+    box-shadow: 0px 0px 8px rgba(167, 167, 167, 0.49);
+    overflow: hidden; // 要記得寫 否則當hover時img變大 會是整張圖片變大張 而非zoom-in
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .mission-content {
+    .tag-btn {
+      font-size: 12px;
+      border: 2px solid rgba(152, 152, 152, 0.6);
+      border-radius: 8px;
+      padding: 1px 5px;
+      background-color: #fffdfb;
+      box-shadow: 0px 0px 5px rgba(142, 142, 142, 0.145);
+      color: #555555;
+      cursor: default;
+
+      &:hover {
+        border-color: $header-bg;
+        color: $hover;
+      }
+    }
+
+    img {
+      cursor: pointer;
+      width: 45px;
+    }
+
+    img:hover {
+      content: url("/heart-clicked.svg");
+    }
+
+    .update-title {
+      font-size: 12px;
+      color: #555555;
+    }
+
+    .price {
+      span {
+        color: $price;
+        font-weight: 600;
+      }
+
+      // 應徵按鈕
+      button {
+        // padding: 3px 10px;
+        color: $main-bg;
+      }
+
+      .heart-btn {
+        border: 0;
+        // right: 30px;
+        color: $text-mark;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        .empty-icon {
+          @extend %fav-icon-style;
+          color: $hover;
+
+          // &:hover{
+          //   color: $price;
+          // }
+          &-hover {
+            //就是fill-icon只是少了跳動
+            @extend %fav-icon-style;
+            color: $price;
+          }
+        }
+
+        .fill-icon {
+          @extend %fav-icon-style;
+          color: $price;
+          animation: heartbeat 0.4s 2;
+          /* 应用名为'heartbeat'的动画，无限循环 */
+        }
+
+        @keyframes heartbeat {
+          0% {
+            transform: scale(1);
+            /* 初始大小 */
+          }
+
+          50% {
+            transform: scale(1.2);
+            /* 放大到1.2倍 */
+          }
+
+          100% {
+            transform: scale(1);
+            /* 返回到原始大小 */
+          }
+        }
+      }
+    }
+
+    // .heart-icon-red{
+    //     color:$hover;
+    // }
+    // .heart-icon-red-line{
+    //     font-size: 18px;
+    //     position: absolute;
+    //     top: 4px;
+    //     left: -1px;
+    // }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .latest-mission-card {
+    width: 100%;
+
+    .mission-img {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .latest-mission-card {
+    width: 100%;
+
+    .mission-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .mission-content {
+      .price {
+        button {
+          padding: 2px 8px;
+        }
+      }
+    }
+  }
+}
+
+
+// 以下為 輪播 (Carousel)
+.carousel-control-prev {
+  left: -27px;
+}
+
+.carousel-control-next {
+  right: -27px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fffdfb;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #f8cb9f;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-size: 15px; //left跟right的icon大小
+  background-repeat: no-repeat;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("/job-icon/angle-left-solid.svg");
+}
+
+.carousel-control-next-icon {
+  background-image: url("/job-icon/angle-right-solid.svg");
+}
+
+.carousel-control-prev-icon svg,
+.carousel-control-next-icon svg {
+  color: transparent;
+}
+
+// .carousel-indicators{
+//     button{
+//         background-color: $hover;
+//     }
+// }

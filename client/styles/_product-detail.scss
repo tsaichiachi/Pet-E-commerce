@@ -1,0 +1,372 @@
+@import "@/styles/_variable.scss";
+
+.product-detail{
+.container{
+background-color: $main-bg;
+}
+a{
+  border-bottom: 0;
+}
+
+// product-itembox
+//product-pic
+.product-pic {
+  max-width: 648px; /* 容器的最大寬度為600px */
+  width: 100%;     /* 容器的寬度為其父元素的100% */
+}
+
+.main-pic {
+  width: 200%;
+  img {
+    max-width: 100%; /* 圖片的最大寬度為其容器的100% */
+    width: 100%;
+    max-width: 620px;
+    height: auto; /* 自動調整高度以保持圖片比例 */
+    border-radius: 2px;
+  }
+}
+
+.other-pic {
+  width: 45%;
+  margin-right: 10px; 
+  img {
+       
+            margin-bottom: 20px; // 添加间距的样式
+            max-width: 100%; /* 圖片的最大寬度為其容器的100% */
+            width: 100%;
+            max-width: 145px;
+            height: auto; /* 自動調整高度以保持圖片比例 */
+            border-radius: 2px;
+            transition: box-shadow 0.3s;
+    }
+    img:hover {
+            opacity: 0.5;
+}
+  .selected-image {
+  border: 1px solid $text-mark; /* 這裡設置邊框的樣式，可以根據需要進行調整 */
+  border-radius: 2px;
+  
+}}
+
+
+//product-detail
+.product-detail{
+     max-width: 648px;
+     width: 100%; 
+}
+
+.pricebox_detail {
+  display: flex;
+  align-items: center; /* 垂直居中對齊 */
+}
+
+.priceBlock {
+  display: inline-block;
+  vertical-align: middle; /* 垂直居中對齊 */
+  margin-right: 4px; /* 調整右邊的間距 */
+  .PriceName1,
+  .font-big{
+  color: $price;
+}
+}
+
+.font-delete {
+  text-decoration: line-through;
+  vertical-align: middle; /* 垂直居中對齊 */
+  color:$text-mark;
+}
+
+.add-to-cart-fav {
+  .add-to-cart{
+    max-width: 500px;
+    width: 100%;
+     .btn{
+      width: 100%;
+     }
+  }
+  .add-to-fav{
+    padding: 5px;
+
+  }
+}
+ 
+.add-to-favorites{
+    margin-top: 20px;
+    button {
+      max-width: 600px;
+      width: 100%; 
+      padding: 9px;  
+    }
+}
+.btn-outline-brown:active {
+  background-color: $text-main;
+  color: $text-main;
+
+}
+.free-delivery  {
+  .free-delivery-1{
+   background-color: $star;
+   border: 1px solid $star;
+   padding: 3px;
+   
+  }
+  .free-delivery-2{
+   border: 1px solid $star;
+   padding: 3px;
+  }
+}
+.coupon  {
+  .coupon-1{
+   background-color: #64b2d1;
+   border: 1px solid #64b2d1;
+   padding: 3px;
+   
+  }
+  .coupon-2{
+   border: 1px solid #64b2d1;
+   padding: 3px;
+  }
+}
+
+.additional-information{
+  li{
+    list-style: none;
+  }
+}
+
+//section-product-detail-tabs
+ .product-detail-tabs {
+    // border-top: 1px solid $light-gray; 
+    border-bottom: 1px solid $light-gray; 
+    margin-top: 50px;
+    .nav-item1,
+    .nav-item2{ 
+    .nav-link {
+            color: $text-main;
+        }
+    }
+  }
+
+//product-description
+.description{
+  margin-top: 10px;
+  padding: 15px;
+  p{
+    color: $text-main;
+  }
+}
+
+.product-description{
+  border-bottom: 1px solid $light-gray; 
+}
+.product-description-pic{
+  margin-bottom: 50px;
+  .product-description-pic-1 img{
+    width: 800px;
+  }
+}
+
+//customer-message
+.customer-message{
+  border-bottom: 1px solid $light-gray; 
+  padding-bottom: 20px;
+
+  .star{
+    width: 100%;
+    max-height: 100%;
+    background-color: $content-bg;
+    margin-top: 20px;
+  }.Overall-rating{
+      border-right: 1px solid $text-main ;
+      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* 垂直置中 */
+      justify-content: center; /* 水平置中 */
+    }
+    
+  }
+
+  .ranking{
+    color: #faaf00;
+    svg{
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+  }
+
+.customer-message{
+  .customer{
+    width: 100%;
+    background-color: $content-bg;
+    margin-top: 20px;
+    padding: 15px;
+  }.customer-star{
+  color: #faaf00;
+  font-size: 1.5rem;
+
+  }
+}
+ .offcanvas{
+        max-width:350px;
+        img{
+        width: 100px;
+        height: 100px;
+        @media screen and (max-width: 768px) {
+            /* 当屏幕宽度小于等于1024px时应用的样式 */
+            width: 80px;
+            height: 80px;
+        }
+    }
+    }
+
+
+//carousel slide
+.slick-prev:before, .slick-next:before{
+        color: $text-main;
+    }
+  .card {
+        width: 98%;
+        border: 1px solid $light-gray;
+        border-radius: 2px;}
+
+.product-card {
+    border-bottom: none;
+    padding: 1%;
+}
+
+.carousel-control-prev {
+    left: -10%; /* 向左移動的距離，調整此值以移動按鈕 */
+}
+
+.carousel-control-next {
+    right: -10%; /* 向右移動的距離，調整此值以移動按鈕 */
+}
+
+.product-description-pic{
+  .product-description-pic-1 img{
+   @media screen and (max-width: 768px) {
+            /* 当屏幕宽度小于等于1024px时应用的样式 */
+            width: 300px;  
+        }
+  }
+}
+  }
+   .evaluation-bar {
+    $block-width: calc(100% - 3px);
+    width: calc(100% - 80px);
+    display: flex;
+    height: auto;
+    margin: 1rem auto;
+    &-left {
+      width: calc($block-width * 0.5);
+
+      .ranking svg {
+        font-size: 42px;
+      }
+    }
+    &-divider {
+      width: 2px;
+      height: 200px;
+      background-color: darken($light-gray, 30%);
+    }
+    &-right {
+      width: calc($block-width * 0.5);
+
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      .bar-group {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        // margin-left: 4rem;
+      }
+      .percentage {
+        width: 260px;
+        height: 10px;
+        display: flex;
+        margin-left: 0.8rem;
+        background-color: $light-gray;
+        --width: 5%; //評論總數的百分比
+        .have {
+          // width: var(--width);
+          background-color: $hover;
+          border-radius: 0 2px 2px 0;
+        }
+      }
+    }
+    @media screen and (max-width: 900px) and (min-width: 768px) {
+      .evaluation-bar-left {
+        width: calc($block-width * 0.4);
+      }
+
+      .evaluation-bar-right {
+        width: calc($block-width * 0.6);
+      }
+    }
+}
+   .evaluation-bar {
+    $block-width: calc(100% - 3px);
+    width: calc(100% - 80px);
+    display: flex;
+    height: auto;
+    margin: 1rem auto;
+    &-left {
+      width: calc($block-width * 0.5);
+
+      .ranking svg {
+        font-size: 42px;
+      }
+    }
+    &-divider {
+      width: 1px;
+      height: 200px;
+      background-color: darken($light-gray, 30%);
+    }
+    &-right {
+      width: calc($block-width * 0.5);
+
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      .bar-group {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        // margin-left: 4rem;
+      }
+      .percentage {
+        width: 260px;
+        height: 10px;
+        display: flex;
+        margin-left: 0.8rem;
+        background-color: $light-gray;
+        --width: 5%; //評論總數的百分比
+        .have {
+          // width: var(--width);
+          background-color: $hover;
+          border-radius: 0 2px 2px 0;
+        }
+      }
+    }
+    @media screen and (max-width: 900px) and (min-width: 768px) {
+      .evaluation-bar-left {
+        width: calc($block-width * 0.4);
+      }
+
+      .evaluation-bar-right {
+        width: calc($block-width * 0.6);
+      }
+    }
+  }
+
+
+
+
+
+
+
+  

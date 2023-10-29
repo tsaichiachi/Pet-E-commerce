@@ -1,0 +1,200 @@
+.coupon-style {
+#container-coupon {
+  position: relative;
+  // margin: auto;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+
+  p {
+    margin-top: -5px;
+    font-size: 0.8em;
+    font-weight: 100;
+    color: $text-main;
+
+    .couponCode{
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+}
+
+h1 {
+  font-size: 0.9em;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding-top: 5px;
+  color: $text-main;
+  padding-bottom: 2px;
+}
+
+
+
+
+.red {
+  color: #d69876;
+}
+
+.priceCode {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+}
+
+
+
+button, .dot-coupon {
+  cursor: pointer;
+}
+
+#success-box {
+  //position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 12%;
+  background: linear-gradient(to bottom right, #ecb885 40%, #c78964 100%);
+  border-radius: 2px;
+  box-shadow: 5px 5px 20px rgba(#a4a4a4, 10%);
+  perspective: 40px;
+}
+
+#error-box {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  right: 12%;
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  border-radius: 2px;
+  box-shadow: 5px 5px 20px rgba(#a4a4a4, 10%);
+}
+#other-box {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  right: 12%;
+  background: linear-gradient(to bottom left, #8dc1ef 40%, #e2ebea 100%);
+  border-radius: 2px;
+  box-shadow: 5px 5px 20px rgba(#a4a4a4, 10%);
+}
+
+.dot-coupon {
+  width: 8px;
+  height: 8px;
+  background: $white;
+  border-radius: 50%;
+  position: absolute;
+  top: 4%;
+  right: 6%;
+  &:hover {
+    background: darken($white, 20%);
+  }
+}
+
+.two {
+  right: 12%;
+  opacity: .5;
+}
+
+
+.cat2{
+  position: absolute;
+  top: 8%;
+  left: 32%;
+  z-index: 2;
+  animation: bounce 1s ease-in infinite;
+}
+
+
+.cat1{
+  position: absolute;
+  z-index: 2;
+  animation: roll 3s ease-in-out infinite;
+}
+
+
+
+.shadow {
+  position: absolute;
+  width: 30%;
+  height: 3%;
+  opacity: .5;
+  background: $dark;
+  left: 35%;
+  top: 42%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.scale {
+  animation: scale 1s ease-in infinite;
+}
+.move {
+  animation: move 3s ease-in-out infinite;
+}
+
+
+.message-coupon {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  height: 40%;
+  top: 40%;
+  padding: 30px 0;
+}
+
+
+
+@keyframes bounce {
+  50% {
+     transform: translateY(-10px);
+  }
+}
+
+@keyframes scale {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+    transform: rotate(168deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+}
+
+
+@keyframes move {
+  0% {
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 25%;
+  }
+}
+@keyframes slide{
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+}
+
+@media  (max-width: 768px) {
+  .coupon-style .cat2 {
+    left: 38%;
+  }
+}

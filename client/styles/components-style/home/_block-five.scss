@@ -1,0 +1,46 @@
+.block-five {
+  background-color: #eeddcc;
+  .title {
+    color: #34251f;
+    font-weight: bold;
+  }
+  .price {
+    color: $price;
+    font-weight: bold;
+    .content {
+      color: #34251f;
+    }
+  }
+  .text-center {
+    .content-block {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.block-five-mobile {
+  background-color: #eeddcc;
+  .title {
+    color: #34251f;
+    font-weight: bold;
+  }
+  .price {
+    color: $price;
+    font-weight: bold;
+    .content {
+      color: #34251f;
+    }
+  }
+  .text-center {
+    .content-block {
+      background-color: #ffffff;
+    }
+  }
+  .photo-block {
+    height: 300px;
+    .photo {
+      width: 60%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.home-product-card {
+  a,
+  a:hover {
+    border: none;
+  }
+  .card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  .card {
+    border: none;
+    .card-body {
+      background-color: $main-bg;
+      .heart-icon-container {
+        position: relative;
+      }
+      .heart-icon-red {
+        color: $hover;
+      }
+      .heart-icon-red-line {
+        font-size: 18px;
+        position: absolute;
+        top: 5px;
+        left: -1px;
+      }
+      .btn {
+        height: 20px;
+        font-weight: bold;
+      }
+      .btn-color-1 {
+        background-color: #facda0;
+        color: #ad4b28;
+      }
+      .btn-color-2 {
+        background-color: $main-bg;
+        color: $star;
+      }
+      .btn-color-3 {
+        background-color: $star;
+        color: $main-bg;
+      }
+      .btn-color-4 {
+        background-color: #edc7d0;
+        color: $price;
+      }
+      .btn-color-5 {
+        background-color: $price;
+        color: #edc7d0;
+      }
+      .btn-color-6 {
+        background-color: #b4a29c;
+        color: #34251f;
+      }
+      .btn-color-7 {
+        background-color: #34251f;
+        color: #b4a29c;
+      }
+      .card-text {
+        color: #34251f;
+        font-weight: bold;
+        height: 60px;
+      }
+      .product-sale-price {
+        color: rgb(189, 189, 189);
+        font-weight: bold;
+        .cart {
+          background-color: #e9a790;
+          .cart {
+            color: white;
+          }
+        }
+        .price {
+          color: $price;
+        }
+      }
+    }
+  }
+  .card-img {
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    height: auto;
+
+    img {
+      transform: scale(1, 1);
+      transition: all 1s ease-out;
+    }
+    img:hover {
+      transform: scale(1.2, 1.2);
+    }
+  }
+}

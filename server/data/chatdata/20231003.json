@@ -1,0 +1,48 @@
+[
+  {
+    "user1": {
+      "id": "1",
+      "account": "Amy",
+      "password": "a12345",
+      "name": "Amy"
+    },
+    "user2": {
+      "id": "2",
+      "account": "Gary",
+      "password": "a12345",
+      "name": "Gary"
+    },
+    "chatcontent": [
+      {
+        "content": "文字內容",
+        "speaker": "Amy",
+        "createTime": 1694408281651
+      },
+      {
+        "content": "文字內容",
+        "speaker": "Gary",
+        "createTime": 1694408281652
+      },
+      {
+        "content": "文字內容",
+        "speaker": "Amy",
+        "createTime": 1694408281653
+      },
+      {
+        "content": "文字內容",
+        "speaker": "Amy",
+        "createTime": 1694408281654
+      },
+      {
+        "content": "文字內容",
+        "speaker": "Amy",
+        "createTime": 1694408281655
+      },
+      {
+        "content": "文字內容",
+        "speaker": "Amy",
+        "createTime": 1694408281656
+      }
+    ]
+  }
+]

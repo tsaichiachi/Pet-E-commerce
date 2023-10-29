@@ -1,0 +1,61 @@
+@import "@/styles/variable";
+.history{
+    border-radius: 10px 10px 10px 10px;
+    background:$main-bg;
+    color:$text-main;
+    line-height: 2;
+    @media screen and (max-width: 768px) {
+        background: $main-bg;
+    }
+    .title{
+        font-weight: 600;
+    }
+    .content{
+        color:black;
+    }
+
+    .follow{
+        color:$price;
+    }
+
+    .listbutton{
+        width: 33.3%;
+        // width: 200px;
+        height: 50px;
+        border: 0px;
+        border-radius: 10px 10px 0px 0px;
+        // background: #f9f4dc;
+        // background: #e5e8dc;
+        background:  #fff;
+        border-top:1px solid $light-gray ;
+        border-right: 1px solid $light-gray;
+    }
+    .first{
+        border-left:1px solid $light-gray ;
+    }
+
+    button.pressed{
+        background: #D8E3E5;
+        border-bottom:#D8E3E5 1px solid;
+    }
+    span{
+        color:$text-main;
+      }
+    .remove{
+        border: 1px solid $hover;
+        background: $cos-white;
+    }
+    .big{
+        font-weight: 600;
+        line-height: 1.5;
+    } 
+    .bg{
+        background: #fff;
+    }
+    .my{
+        color: $hover;
+    }  
+    .nohistory{
+        height:870px;
+    }
+}

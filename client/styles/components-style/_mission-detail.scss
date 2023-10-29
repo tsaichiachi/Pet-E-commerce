@@ -1,0 +1,686 @@
+@mixin btn-config($color, $bg, $border-color, $hover-color, $hover-bg) {
+  color: $color;
+  background-color: $bg;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  padding: 0.375rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg;
+  }
+  &:active {
+    background-color: darken($hover-bg, 3%);
+  }
+  &:disabled {
+    background-color: lighten($hover-bg, 10%);
+    // color: $light-gray;
+    cursor: not-allowed;
+  }
+}
+
+%mission-button-style {
+  font-size: 1.2rem;
+  // font-weight: bold;
+  width: 150px;
+  height: 45px;
+  // box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.25);
+}
+
+%chat-button-style {
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px 100px 100px 100px;
+  background-color: white;
+  border: none;
+  box-shadow: 1px 1px 10px rgba(79, 79, 79, 0.719);
+  position: absolute;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  transition: all 0.3s linear;
+  top: 15px;
+  left: 45px;
+
+  &:hover {
+    width: 56px + 28px + 30px;
+
+    & > span {
+      right: 60px;
+      color: $price;
+    }
+
+    svg {
+      color: $price;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: $hover;
+  }
+
+  & > span {
+    width: 56px;
+    position: absolute;
+    font-size: 14px;
+    left: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+%heart-icon-style {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.mission-detail {
+  nav a {
+    border-bottom: 0;
+  }
+
+  aside {
+    // background-color: $content-bg;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.452);
+
+    .left-title {
+      font-weight: bold;
+      color: $text-main;
+      opacity: 0.8;
+    }
+
+    img {
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .poster-gender {
+      font-size: 1.2rem;
+    }
+
+    .poster-divider {
+      width: 90%;
+      margin: auto;
+      color: #8d8d8d;
+      height: 2px;
+    }
+
+    .poster-email {
+      word-wrap: break-word; // 避免email超出框框範圍
+    }
+
+    .chat-btn {
+      box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.25);
+      margin: 0.5rem auto;
+    }
+  }
+
+  .left-block-btns-group {
+    margin-top: 2rem;
+    position: relative;
+    height: 70px;
+    background: linear-gradient(
+      to bottom,
+      rgba(240, 195, 150, 0.6078431373),
+      #e6bd99
+    );
+  }
+
+  .left-block-btn {
+    @extend %chat-button-style;
+    left: 8%;
+  }
+
+  .apply-now-btn {
+    // left: 160px;
+    left: 55%;
+  }
+
+  @media screen and (max-width: 576px) {
+    .left-block-btn {
+      left: 10%;
+    }
+
+    .apply-now-btn {
+      // left: 160px;
+      left: 60%;
+    }
+  }
+
+  // 熱門任務
+  .MuiCard-root {
+    width: 100%;
+    margin: 1rem auto;
+    background-color: $cos-white;
+    align-items: center;
+    border: 0;
+    position: relative;
+    top: 0;
+    box-shadow: 0px 0px 2px rgba(167, 167, 167, 0.39);
+
+    &:hover {
+      top: -5px;
+      background-color: $main-bg;
+      box-shadow: 0px 0px 8px rgba(167, 167, 167, 0.49);
+    }
+  }
+
+  .MuiAspectRatio-content {
+    background-color: transparent;
+  }
+
+  .MuiTypography-root {
+    color: $text-main;
+    font-weight: normal;
+  }
+
+  .MuiChip-root {
+    border: 1px solid $hover;
+    color: $hover;
+  }
+
+  .MuiTypography-body-sm {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .popular-cards {
+    width: 100%;
+    gap: 1rem;
+
+    .popular-card-content {
+      width: 9rem;
+
+      .popular-card-title {
+        min-height: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .MuiCard-root {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  header {
+    // background-color: $content-bg;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.452);
+
+    h2 {
+      font-weight: bold;
+      color: $text-main;
+      opacity: 0.8;
+    }
+
+    .header-font {
+      color: $text-mark;
+    }
+
+    img {
+      cursor: pointer;
+      width: 60px;
+      top: 10px;
+      right: 10px;
+    }
+
+    img:hover {
+      content: url("/heart-clicked.svg");
+    }
+
+    .heart-btn {
+      border: 0;
+      // right: 30px;
+      color: $text-mark;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      padding: 0;
+
+      .empty-icon {
+        @extend %heart-icon-style;
+        color: $hover;
+
+        // &:hover{
+        //   color: $price;
+        // }
+        &-hover {
+          //就是fill-icon只是少了跳動
+          @extend %heart-icon-style;
+          color: $price;
+        }
+      }
+
+      .fill-icon {
+        @extend %heart-icon-style;
+        color: $price;
+        animation: heartbeat 0.4s 2;
+        /* 应用名为'heartbeat'的动画，无限循环 */
+      }
+
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+          /* 初始大小 */
+        }
+
+        50% {
+          transform: scale(1.2);
+          /* 放大到1.2倍 */
+        }
+
+        100% {
+          transform: scale(1);
+          /* 返回到原始大小 */
+        }
+      }
+    }
+
+    .right-block-btn {
+      @extend %chat-button-style;
+      left: 86%;
+    }
+
+    @media screen and (max-width: 576px) {
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .description {
+    // background-color: $content-bg;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.452);
+    // padding: 1rem 0;
+  }
+
+  // 舊的
+  .item {
+    $block-width: 9px;
+    width: calc(100% - 100px);
+    margin: 1.5rem auto;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      // margin-bottom: 0.5rem;
+
+      // &::before {
+      //   //標題前的裝飾塊
+      //   content: "";
+      //   display: inline-block; //與標題文字水平排列
+      //   background-color: $hover;
+      //   width: $block-width;
+      //   height: 35px;
+      //   margin-right: 0.5rem;
+      // }
+    }
+
+    // .salary {
+    //   color: $price;
+    // }
+
+    &-introduction {
+      margin-left: 1rem;
+      // font-weight: 500;
+      text-align: justify;
+      list-style: disc;
+      padding-left: 1.5rem;
+      color: $text-mark;
+
+      // list-style-position: inside;
+      li {
+        // text-indent: -1.8rem; /* 添加負縮排來對齊第一排的文字 */
+        // padding-left: 1.8rem; /* 補償負縮排的效果 */
+        list-style-position: outside;
+        margin-bottom: 1rem;
+
+        p {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &-image {
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      swiper-slide {
+        width: 300px; //swiper-slide要跟圖片等寬 否則預設太寬 會導致只出現第一張照片
+      }
+    }
+  }
+
+  // 新的
+  .item {
+    margin: 2rem 3rem 3rem 3rem;
+    width: calc(100% - 6rem); // 減掉兩邊的margin
+
+    & p {
+      margin: 0;
+      // color: #6d6868;
+    }
+
+    &-title {
+      color: $text-main;
+      opacity: 0.8;
+      font-weight: bold;
+
+      .running-cat {
+        right: -45px;
+        top: -15px;
+        width: 120px;
+      }
+    }
+
+    &-divider {
+      margin: 0.2rem 0 1rem 0;
+      color: darken($light-gray, 30%);
+      height: 2px;
+    }
+
+    &-content {
+      // margin-left: $detail-block-width + 5px;
+      padding-left: 1.6rem;
+      color: $text-mark;
+      // font-weight: 500;
+      text-align: justify;
+    }
+  }
+
+  .salary {
+    color: $price;
+    padding-left: 1.6rem;
+  }
+
+  .mission-place {
+    margin-bottom: 1.2rem;
+  }
+
+  .detailed-description {
+    margin-top: 3rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    padding: 0 12%;
+  }
+
+  @media screen and (max-width: 575px) {
+    header {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .item {
+      margin: 2rem;
+      width: calc(100% - 4rem); // 減掉兩邊的margin
+
+      &-introduction {
+        margin-left: 0;
+      }
+
+      &-title {
+        // &::before {
+        //   height: 30px;
+        // }
+        .running-cat {
+          top: -20px;
+          right: -30px;
+        }
+      }
+    }
+  }
+}
+
+.ask-and-apply {
+  // width: 100vw;
+  height: 80px;
+  background-color: $main-bg;
+  position: sticky;
+  bottom: 0;
+  z-index: 99;
+  // overflow-x: hidden;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.25);
+  gap: 5%;
+
+  &-btn {
+    @extend %mission-button-style;
+  }
+
+  @media screen and (max-width: 576px) {
+    &-btn {
+      font-size: 1rem;
+      width: 30%;
+      height: 45px;
+    }
+  }
+
+  .fav {
+    left: 5%;
+    color: $text-main;
+  }
+
+  .heart-icon {
+    color: $hover;
+    cursor: pointer;
+  }
+}
+
+.apply-modal {
+  .modal-header {
+    background: linear-gradient(
+      to bottom,
+      rgba(240, 195, 150, 0.6078431373),
+      #e6bd99
+    );
+
+    .modal-title {
+      // font-weight: bold;
+      color: $text-main;
+      opacity: 0.8;
+      margin-left: 1rem;
+    }
+  }
+
+  .modal-body {
+    .profile {
+      gap: 2rem;
+
+      .avatar {
+        img {
+          width: 10rem;
+          height: 10rem;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .recommend {
+      width: 80%;
+      margin: 0 auto;
+
+      &-title {
+        span {
+          color: $text-mark;
+        }
+      }
+
+      &-content {
+        width: 100%;
+        height: 160px;
+        outline: none;
+        border-color: lightgray;
+        border-radius: 3px;
+
+        // 更改textarea樣式
+        &:focus {
+          outline: none;
+          border: 1.8px solid $hover;
+          border-radius: 3px;
+        }
+      }
+
+      .auto-send {
+        .checkbox {
+          width: 20px;
+        }
+
+        &-title {
+          color: $text-main;
+        }
+
+        span {
+          color: $text-mark;
+        }
+
+        // 更改checkbox樣式
+        input[type="checkbox"] {
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+          position: relative;
+        }
+
+        input[type="checkbox"]:after {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 0;
+          content: " ";
+          border-radius: 2.5px;
+          color: #fff;
+          display: inline-block;
+          visibility: visible;
+          padding: 0px 3px;
+        }
+
+        input[type="checkbox"]:checked:after {
+          content: "✓";
+          font-size: 14px;
+          font-weight: bold;
+          background-color: $hover;
+          border: 1px solid $text-main;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    gap: 2rem;
+
+    button {
+      width: 25%;
+      font-size: 1rem;
+      border-radius: 3px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .modal-body {
+      .profile {
+        gap: 1.5rem;
+
+        .avatar {
+          img {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+      }
+    }
+
+    .modal-footer {
+      button {
+        width: 30%;
+      }
+    }
+  }
+}
+
+// alert
+.swal2-container {
+  // 容器
+  background-color: #fff;
+  border: 2px solid #ccc;
+}
+
+.swal2-actions {
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.swal2-confirm,
+.swal2-popup .swal2-actions button.swal2-confirm {
+  // 確認按扭
+  @include btn-config(
+    $text-main,
+    $header-bg,
+    transparent,
+    $cos-white,
+    darken($header-bg, 10%)
+  );
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.swal2-cancel,
+.swal2-popup .swal2-actions button.swal2-cancel {
+  // 取消按鈕
+  @include btn-config(
+    darken($hover, 10%),
+    $main-bg,
+    $hover,
+    $cos-white,
+    $header-bg
+  );
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.swal2-title {
+  font-size: 1.25rem;
+  color: $price;
+}
+
+.swal2-content {
+  font-size: 1rem;
+  color: $text-mark;
+}
+
+body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+  overflow: hidden;
+  padding-right: 9px;
+}
+// .swal2-shown{
+//   padding-right: 9px;
+//   overflow: hidden;
+// }
+.swal2-shown {
+  // overflow: unset !important;
+  margin-right: 8.5px !important;
+}

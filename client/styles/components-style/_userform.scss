@@ -1,0 +1,152 @@
+
+.user-profile {
+  // min-height: 913px;
+  //width: 100%;
+  //margin: 0 auto 0; 
+  //background-color: #fff;
+  $form-height: 80px;
+  padding: 0 auto;
+  position: relative;
+  .title {
+    //margin: 50px 150px; //手機要調整
+ 
+    .my{
+      color: #d7965b;
+    }
+    & > p {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 0.8rem;
+        height: 28px;
+      }
+    }
+  }
+  }
+  .user-form{
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    padding-top: 100px;
+    .fs-btn{
+      width: 100%;
+    }
+    
+   // margin: 0 50px;
+  .user-btn-group{
+margin: 4.5rem 0;
+    }
+   .ws20{
+    width: 100%;
+    overflow: auto;
+ 
+    .fs3{
+      float: left;
+      margin-left: 5px;
+      margin-right: 5px;
+      width: calc(14% - 10px);
+    }
+    .fs11{
+      float: left;
+      margin-left: 5px;
+      margin-right: 5px;
+      width: calc(55% - 10px);
+    }
+    .ws6{
+      float: left;
+      width: 80%;
+
+      .fs5{
+        float: left;
+      margin-left: 5px;
+      margin-right: 5px;
+      width: calc(35% - 14px);
+      }
+
+    }
+ 
+   }
+   .fs5{
+    float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: calc(35% - 14px);
+  }
+   .address-w20{
+    width: calc(70% - 5px);
+    padding-bottom: 45px; //行距
+
+    .address-11{
+      width: 78%;
+      float: right;
+    }
+   }
+
+  }
+/* 隱藏 radio 輸入框 */
+.radio-box input[type="radio"] {
+  display: none; 
+}
+
+/* 當 radio 被選擇時，改變相鄰按鈕的樣式 */
+.radio-box input:checked + .gender-btn  {
+  background-color: #d7965b; /* 背景顏色設為 #d7965b */
+  color: #fff; /* 文字顏色設為 #fff */
+}
+
+/* 共用按鈕樣式 */
+.radio-box .gender-btn {
+  display: inline-block; /* 設為行內元素以在同一行顯示 */
+  margin: 0 5px 5px 0; /* 外邊距設置 */
+  padding: 5px 25px; /* 內邊距設置 */
+  background: #f7f7f7; /* 背景色設為 #f7f7f7 */
+  color: #333; /* 文字顏色設為 #333 */
+  cursor: pointer; /* 游標設為手指形狀 */
+}
+
+.radio-box .gender-btn:hover {
+  background: #bbb; /* 懸停時背景色設為 #bbb */
+  color: #fff; /* 懸停時文字顏色設為 #fff */
+}
+.radio-box .round {
+  border-radius: 2px; /* 設置圓角半徑為 2px */
+}
+
+
+
+  @media  (max-width: 768px) {
+    .p-wrapper{
+      //max-width: 1400px;
+      display: grid;
+      grid-template-columns: 1fr ;
+    
+    }
+    .user-profile {
+      // min-height: 913px;
+      width: 100%;
+      background-color: $main-bg;
+      padding: 0px 5px;
+     
+      }
+      .user-form{
+        &-item{
+          > label{
+            width: 40%;
+            float: left;
+            padding-right: 10px;
+          }
+          > div{
+            width: 60%;
+            float: right;
+            >.form-input{
+              width: 100%;
+            }
+          }
+        }
+        .fs5{
+          width: calc(60% - 10px);
+          margin-bottom: 5px;
+        }
+    
+      }
+  }

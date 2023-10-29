@@ -1,0 +1,18 @@
+.article-list-card {
+  .card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  }
+  .card{
+    border: none;
+  }
+  .card-title {
+    font-weight: bold;
+    color: $text-main;
+  }
+  .card-text{
+    color: $text-mark;
+  }
+  .card-body{
+    background-color: $content-bg;
+  }
+}

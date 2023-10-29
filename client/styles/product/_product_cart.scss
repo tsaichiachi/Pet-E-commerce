@@ -1,0 +1,196 @@
+@import "@/styles/variable";
+.cart{
+    background: $main-bg;
+    color: $text-main;
+    .zero{
+        height: calc(100vh - 406px);
+        .btn-brown{
+            color:$main-bg ;
+        }
+        
+    }
+    .step{
+        .step1{
+            background: #fff;
+            border-bottom: 4px $hover  solid;
+            border-radius: 20px 0 0 20px;
+        }
+        .step2{
+            background: #fff;
+            border-radius: 0 20px 20px 0;
+            color: $light-gray;
+        }
+    }
+
+    .form-check-input:checked{
+        background-color: $text-main;
+        color: #fff;
+    }
+    .form-check-input{
+        border: 1px solid $text-main;
+        vertical-align: middle
+    }
+    .price{
+        color: $light-gray;
+        text-decoration: line-through
+    }
+    .newprice{
+        color: $price;
+    }
+    .cart-d-content{
+ 
+            thead{
+                background:$content-bg;
+                // border-bottom: 1px solid $light-gray;
+                // border-top: 1px solid $light-gray;
+            }
+            th{
+                line-height: 2.5;
+            }
+            td:nth-child(1) {
+                width: 5%;
+            }
+            td:nth-child(2) {
+                width: 15%;
+            }
+            td:nth-child(3) {
+                width: 30%;
+            }
+            td:nth-child(4) {
+                width: 10%;
+            }
+            td:nth-child(5) {
+                width: 12%;
+            }
+            td:nth-child(6) {
+                width: 10%;
+            }
+            td:nth-child(7) {
+                width: 10%;
+            }
+        tbody{
+            tr{
+                border-bottom: .1px solid $light-gray ;
+                td{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                img{
+                    width: 120px;
+                    height: 120px;
+                }
+                .type{
+                    color: $hover;
+                }
+            }
+            .form-control{
+                border: $text-main 1px solid;
+                background: $main-bg;
+                box-shadow: none;
+            }
+            .delete{
+                color: $text-main;
+                background: transparent;
+                border: 0;
+            }
+        }
+
+    }
+
+    .cart-m-content{
+        thead{
+            background: $content-bg;
+            // border-bottom: 1px solid $light-gray;
+            }
+        th{
+            line-height: 1.5;
+        }
+
+        tbody{
+
+            tr{
+                border-bottom: .1px solid $light-gray ;
+                td{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                td:nth-child(1) {
+                    width: 5%;
+                }
+                td:nth-child(2) {
+                    width: 20%;
+                }
+                td:nth-child(3) {
+                    width: 40%;
+                }
+                td:nth-child(4) {
+                    width: 30%;
+                }
+                td:nth-child(5) {
+                    width: 5%;
+                }
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+                .type{
+                    color: $hover;
+                }
+
+            }
+            .form-control{
+                border: $text-main 1px solid;
+                background: $main-bg;
+                box-shadow: none;
+            }
+            .delete{
+                color: $text-main;
+                background: transparent;
+                border: 0;
+            }
+    
+        }
+    }
+    .discount{
+        font-weight: 600;
+    }
+
+
+    .form-select:focus{
+        box-shadow: none;
+        border: 1px solid $text-main;
+        
+    }
+    .detail{
+        border: 1px $text-main solid;
+        border-radius: 2px;
+        .cal{
+            border-bottom:2px solid $text-main ;
+        }
+        @media screen and (max-width: 576px) {
+            /* 当屏幕宽度小于等于1024px时应用的样式 */
+            border: 0px ;
+          }
+    }    
+    .progress-part{
+        p{
+            color: $light-gray;
+            line-height: 0.1;
+        }
+        background: #fff;
+        .progress-bar{
+            background-color:$hover;
+        }
+    
+    }
+    .next{
+        // background:  #f2f2f2;
+        background: $border-color;
+
+    }
+
+     
+      
+}
+
+

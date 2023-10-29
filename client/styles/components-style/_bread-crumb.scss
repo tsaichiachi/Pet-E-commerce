@@ -1,0 +1,15 @@
+.breadcrumb {
+  color: $text-main;
+  font-weight: bold;
+  .breadcrumb-item {
+    color: $text-main;
+    font-weight: bold;
+
+  }
+  .active{
+    color:$text-mark
+  }
+  a:hover{
+    border-bottom: $hover 5px solid;
+  }
+}

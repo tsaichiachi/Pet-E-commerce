@@ -1,0 +1,72 @@
+@import "@/styles/variable";
+.order-detail {
+  background: #fff;
+  border-radius: 10px 10px 10px 10px;
+  color:$text-main;
+  line-height: 2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: 768px) {
+    box-shadow:0px 0px 0px transparent;
+    background: $main-bg;
+  }
+
+  .textareasize {
+    height: 160px;
+  }
+
+    img {
+      width: 100px;
+      height: 100px;
+      @media screen and (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+
+    }
+  }
+  button.pressed{
+    display: none;
+  }
+
+  .on {
+    color: gold;
+  }
+  
+  .off {
+    color: gray;
+  }
+  
+  .good-style{
+    color:red;
+  }
+  
+  .star-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  p{
+    color:  $text-dark;
+  }
+  .listbutton{
+    width: 200px;
+    height: 50px;
+    border: 0px;
+    border-radius: 10px 10px 0px 0px;
+    background:#fff;
+
+  }
+  span{
+    color:$text-main;
+  }
+  .back{
+    text-indent: 2em;
+  }
+  .title{
+    font-weight: 600;
+    color:$text-main;
+  }
+  .my{
+    color: $hover;
+}  
+}

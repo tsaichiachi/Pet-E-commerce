@@ -1,0 +1,65 @@
+@import "@/styles/_mixin.scss";
+.btn-confirm {
+  @include btn-config(
+    $main-bg,
+    $hover,
+    transparent,
+    $main-bg,
+    darken($hover, 5%)
+  );
+}
+
+.btn-outline-confirm {
+  @include btn-config(darken($hover, 10%), $main-bg, $hover, $main-bg, $hover);
+}
+
+.btn-second {
+  @include btn-config(
+    $text-main,
+    $header-bg,
+    transparent,
+    $text-main,
+    darken($header-bg, 5%)
+  );
+}
+
+.btn-outline-second {
+  @include btn-config(
+    $header-bg,
+    transparent,
+    $header-bg,
+    $text-main,
+    $header-bg
+  );
+}
+.btn-brown {
+  @include btn-config(
+    $main-bg,
+    $text-main,
+    transparent,
+    $main-bg,
+    lighten($text-main, 5%)
+  );
+}
+.btn-outline-brown {
+  @include btn-config(
+    $text-main,
+    transparent,
+    $text-main,
+    $main-bg,
+    $text-main
+  );
+}
+
+.btn-price {
+  @include btn-config(
+    $main-bg,
+    $price,
+    transparent,
+    $main-bg,
+    lighten($price, 5%)
+  );
+}
+.btn-outline-price {
+  @include btn-config($price, transparent, $price, $main-bg, $price);
+}

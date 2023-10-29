@@ -1,0 +1,132 @@
+$main-bg: #fbf5ef; //主背景顏色
+$header-bg: #f8cb9f; //header&footer背景
+$content-bg: #f4ece4; //大色塊背景
+$text-main: #512f10; //主text顏色
+$text-dark: rgb(21, 21, 21); //次text顏色
+$text-mark: #6d6868; //標註text色
+$light-gray: #d9d9d9; //淺灰text色
+$hover: #d7965b; //主hover色
+$price: #ca526f; //強調色
+$star: #ffd362; //star色
+$cos-white: #fffdfb; //取代白色
+
+// Customize font-size
+// 網頁版：size-1 ~ size-7 下面七種字體大小的className
+// 手機版：m-size-1 ~ m-size-7 下面七種字體大小的className
+$web-font: 4.375rem, 3.5rem, 2.5rem, 1.875rem, 1.56rem, 1.25rem, 1rem;
+$mobile-font: 3rem, 2.625rem, 2.125rem, 1.5rem, 1.25rem, 1rem, 0.875rem;
+
+@import "@/styles/_buttons.scss";
+
+@for $i from 1 through 7 {
+  .size-#{$i} {
+    font-size: 4vw;
+    font-size: max(nth($mobile-font, $i), min(4vw, nth($web-font, $i)));
+    color: $text-dark;
+    margin: 0;
+    @if $i != 7 {
+      color: $text-main;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  @for $i from 1 through 7 {
+    .m-size-#{$i} {
+      font-size: 3vw;
+      font-size: max(nth($mobile-font, $i), min(3vw, nth($web-font, $i)));
+      color: $text-dark;
+      margin: 0;
+      @if $i != 7 {
+        color: $text-main;
+      }
+    }
+  }
+}
+
+.form-input,
+.form-select {
+  height: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-indent: 5px;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  &:focus {
+    border: 1px solid $hover;
+    outline: none; /* 去掉預設input聚焦時的黑框線 */
+    // box-shadow: 0 1px 4px rgb(0, 0, 0, 0.25);
+  }
+}
+.m-form-input {
+  @extend .form-input;
+  height: 2rem;
+}
+.form-area {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-indent: 5px;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  &:focus {
+    border: 1px solid $hover;
+    outline: none; /* 去掉預設input聚焦時的黑框線 */
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-form-input {
+    height: 2rem;
+  }
+}
+
+// 麵包屑樣式
+.breadcrumb-wrapper {
+  margin: 15px 0 20px 0;
+  .breadcrumb {
+    margin: 0;
+    color: $text-main;
+    & > * {
+      color: $text-main;
+    }
+    .active {
+      color: $text-mark;
+    }
+  }
+}
+
+// 分頁導覽樣式
+.cos-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  .ant-pagination-item,
+  .ant-pagination-prev .ant-pagination-item-link,
+  .ant-pagination-next .ant-pagination-item-link {
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  .ant-pagination-item-active {
+    background-color: $text-main;
+    border-color: transparent;
+    color: $cos-white;
+    &:hover {
+      // 被選中時的hover，邊框顏色變淺一點
+      background-color: lighten($text-main, 5%);
+      border-color: transparent;
+    }
+  }
+  .ant-pagination-prev:hover:not(.ant-pagination-disabled)
+    .ant-pagination-item-link,
+  .ant-pagination-next:not(.ant-pagination-disabled):hover
+    .ant-pagination-item-link {
+    // 去除hover時左右鍵的背景灰色及增加外邊框，並禁止disabled時增加border外框
+    background-color: transparent;
+    border-color: $text-main;
+  }
+  .ant-pagination-item:not(.ant-pagination-item-active):hover {
+    // hover時的效果
+    background-color: transparent;
+    border-color: $text-main;
+  }
+  .ant-pagination-item-container * {
+    // 改變分頁收納icon的顏色
+    color: $text-main;
+  }
+}

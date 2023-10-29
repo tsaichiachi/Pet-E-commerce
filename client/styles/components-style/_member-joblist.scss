@@ -1,0 +1,71 @@
+@import "@/styles/variable";
+.joblist{
+    border-radius: 10px 10px 10px 10px;
+    background: $main-bg;
+    color:$text-main;
+    @media screen and (max-width: 768px) {
+        background: $main-bg;
+    }
+    .title{
+        font-weight: 600;
+    }
+
+    .follow{
+        color:$price;
+    }
+
+
+    .listbutton{
+        width: 20%;
+        // width: 200px;
+        height: 50px;
+        border: 0px;
+        border-bottom: 1px solid $light-gray;
+        border-radius: 10px 10px 0px 0px;
+        // background: #f9f4dc;
+        // background: #e5e8dc;
+        background: #fff;
+        border-top:1px solid $light-gray ;
+        border-right: 1px solid $light-gray;
+    }
+    .first{
+        border-left:1px solid $light-gray ;
+    }
+
+    button.pressed{
+        background: #D8E3E5;
+        border-bottom:#D8E3E5 1px solid;
+    }
+    .apply{
+        border: 1px solid $hover;
+        
+        background: $header-bg;
+
+    }
+    .apply p{
+        color:$text-main;
+    }
+    .status{
+        color: $price;
+
+    }
+    span{
+        color:$text-main;
+      }
+    .title1{
+        color:$price;
+    }
+    .big{
+        font-weight: 600;
+    }
+    .bg{
+        background: #fff;
+    } 
+
+    .my{
+        color: $hover;
+    }  
+    .nojoblist{
+        height:870px;
+    }
+}

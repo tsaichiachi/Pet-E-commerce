@@ -1,0 +1,21 @@
+.pagination{
+    button{
+        width: 35px;
+        height: 35px;
+    }
+    .active{
+        background: $text-main;
+        border-radius: 50%;
+        color: $main-bg;
+    }
+    .btn{
+        border-radius: 50%;
+    }
+    .nocolor{
+        color:$text-mark;
+    }
+    .noclick{
+        width: 38px;
+        height: 38px;
+    }
+}

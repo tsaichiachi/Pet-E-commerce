@@ -1,0 +1,25 @@
+.footer {
+  background-color: $header-bg;
+  height: 180px;
+  position: relative;
+  // z-index: 500;
+
+  &-links {
+    margin-top: 2.7rem;
+  }
+  .copyright {
+    color: $text-mark;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 250px;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    a:not(a:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.product-card{   
+    .card{
+        border: none;
+        .card-body{
+            background-color: $main-bg;
+            .heart-icon-container{
+                position: relative;
+            }
+            .heart-icon-red{
+                color:$hover;
+            }
+            .heart-icon-red-line{
+                font-size: 18px;
+                position: absolute;
+                top: 5px;
+                left: -1px;
+            }
+            .btn{
+                height: 20px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            .btn-color-1{
+                background-color: #FACDA0;
+                color: #AD4B28;
+            }
+            .btn-color-2{
+                background-color:$main-bg;
+                color: $star
+            }
+            .btn-color-3{
+                background-color:$star;
+                color: $main-bg
+            }
+            .btn-color-4{
+                background-color:#EDC7D0;
+                color: $price
+            }
+            .btn-color-5{
+                background-color: $price;
+                color:#EDC7D0;     
+            }
+            .btn-color-6{
+                background-color: #B4A29C;
+                color:#34251F;     
+            }
+            .btn-color-7{
+                background-color: #34251F;
+                color:#B4A29C;     
+            }
+            .card-text{
+                color: #34251F;
+                font-size: 1.25rem;
+                font-weight: bold;
+                height: 60px;
+            }
+            .product-sale-price{
+                color: rgb(189, 189, 189);
+                font-weight: bold;
+                .cart{
+                    background-color: #E9A790;
+                    .cart{
+                        color: white;
+                    }
+                }
+                .price{
+                    color: $price;
+                }
+            }
+        }
+    }
+}
